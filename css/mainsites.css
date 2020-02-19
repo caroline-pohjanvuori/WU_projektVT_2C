@@ -2,11 +2,24 @@
     margin: 0 ;
     padding:0;
 }
+#title{
+    font-size: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: crimson;
+
+}
+h1{
+    font-size: 30px;
+}
+
+h3{
+    font-size:25px;
+}
 
 .wrapper{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 120px 100vh;
+    grid-template-rows: 50px 100px 100vh;
     grid-template-areas:
     "nv"
     "he"
@@ -16,22 +29,44 @@
 nav{
     grid-area: nv;
     background-color:cornsilk;
-    padding-top: 5px;
-    padding-left: 5px;
+
+}
+
+li{
+    list-style: none;
+    color: white;
+    font-size: 30px;
+}
+
+#smallinks{
+    color: yellow;
+    
 }
 
 .burger div{
-    width: 40px;
-    height: 6px;
+    width: 55px;
+    height: 10px;
     background-color: coral;
     
     margin: 5px;
     border-radius: 10% ;
     transition: all 0.5s;
 }
+.box{
+    height: 50px;
+    width: 45vw;
+    left: -45vw;
+    position: fixed;
+    background-color: coral;
+    transition: all 1s;
+}
+
+.boxActive{
+    transform: translatex(45vw);
+}
 
 .toggle .line1{
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-6px, 15px);
     background-color: crimson;
 }
 
@@ -40,32 +75,59 @@ nav{
 }
 
 .toggle .line3{
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-6px, -15px);
     background-color: crimson;
 }
 .navLinks{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    position: absolute;
-    left: -40vh;
-    top: 0;
+    position: fixed;
+    left: -45vw;
+    top: 5;
     background-color: coral;
     align-items: center;
-    width:40vw;
-    height:90vh ;
+    width:45vw;
+    height:95vh ;
     transition: all 1s;
+}
+
+.navActive{
+    transform: translateX(45vw);
+   
+}
+
+.shadow{
+    top: 0;
+    z-index: 10;
+    width: 55vw;
+    height: 100vh;
+    opacity: 0;
+    right: -55vw;
+    transition: all 1s;
+    position: fixed;
+}
+
+.shadowActive{
+    opacity: 15%;
+    background-color: black;
+    right: 0vw;
 }
 
 header{
     grid-area: he;
     background-color: cornsilk;
     border-bottom: solid 3px coral ;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
 }
 
 .mainpart{
     grid-area: ma;
     background-color: white;
+    width: 100vw;
     
     
 }
@@ -76,4 +138,40 @@ article{
     padding-top: 5px;
     border-bottom: 3px solid gray;
     
+}
+
+.picLibrary{
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 0;
+    margin-right: 0;
+}
+.library{
+    border-radius: 2px;
+    width: 97vw;
+  
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    
+}
+
+.overlayPlus{
+    position: absolute;
+    width: 130px;
+    height: auto;
+    opacity: 80%;
+}
+
+.morePictures:hover .overlayPlus{
+    opacity: 50%;
+} 
+
+.morePictures{
+    position: relative;
+}
+
+img{
+    height: 125px;
+    width: 125px;
 }

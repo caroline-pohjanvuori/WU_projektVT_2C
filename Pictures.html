@@ -8,25 +8,35 @@
     <link rel="stylesheet" href="css/mainsites.css">
 </head>
 <body>
+    
     <div class="wrapper">
         <header>
-            <h1>TripTrap Cosplay</h1>
+            <h1 id="title">TripTrap Cosplay</h1>
         </header>
+        
         <nav>
-
-            <div class="burger">
+            <div class="box"></div>
+            <div class="burger">    
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
+            <div class="shadow"></div>
 
+            
             <ol class="navLinks">
                 <li class="sections">Stl</li>
                 <li class="sections" id="activeSite">Pictures</li>
                 <li class="sections">patterns</li>
-                <li class="smallinks">QaA</li>
-                <li class="smallinks"><img src="" alt="insta icon"></li>
-            </ol>   
+                <li>
+                    <ol class="externallinks">
+                        <li id="smallinks">QnA</li>
+                        <li id="smallinks">insta</li>
+                    </ol>
+                </li>
+            </ol> 
+            
+            
 
         </nav>
         <div class="mainPart">
@@ -36,25 +46,38 @@
             </article>
             <section class="picLibrary">
                 <h3>Frollo</h3>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <div class= "library">
+                    <img src="img/unnamed.png" alt="place holder">
+                    <img src="img/unnamed.png" alt="place holder">
+                    <img src="img/unnamed.png" alt="place holder">
+                    <img src="img/unnamed.png" alt="place holder">
+                    <img src="img/unnamed.png" alt="place holder">
+                        <a href="https://sv.wikipedia.org/wiki/Cosplay" class="morePictures">
+                            <img src="img/plus.png" alt="plus" class="overlayPlus">
+                            <img src="img/unnamed.png" alt="morePictures">
+                        </a>
+                    
+                </div>
+                
             </section>
             <section class="picLibrary">
                 <h3>Cavendish</h3>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <div  class="library">
+                    <img src="img/unnamed.png" alt="place holder">
+                    <img src="img/unnamed.png" alt="place holder">
+                    <img src="img/unnamed.png" alt="place holder">
+                    <img src="img/unnamed.png" alt="place holder">
+                    <img src="img/unnamed.png" alt="place holder">
+                    <a href="https://sv.wikipedia.org/wiki/Cosplay" class="morePictures">
+                        <img src="img/plus.png" alt="plus" class="overlayPlus">
+                        <img src="img/unnamed.png" alt="morePictures">
+                    </a>
+                </div >
             </section>
         </div>
 
         
     </div>
+    <script src="js/mainsite.js"></script>
 </body>
 </html>
