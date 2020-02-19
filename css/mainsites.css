@@ -2,12 +2,25 @@
     margin: 0 ;
     padding:0;
 }
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;  
+}
 #title{
     font-size: 45px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: crimson;
 
 }
+#activeSite{
+    background-color: brown;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 h1{
     font-size: 30px;
 }
@@ -15,6 +28,12 @@ h1{
 h3{
     font-size:25px;
 }
+
+#instagram{
+    height: 40px;
+    width: auto;
+}
+
 
 .wrapper{
     display: grid;
@@ -36,11 +55,19 @@ li{
     list-style: none;
     color: white;
     font-size: 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ol{
+    width: 100%;
+    height:100%;
 }
 
 #smallinks{
-    color: yellow;
-    
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .burger div{
@@ -79,17 +106,29 @@ li{
     background-color: crimson;
 }
 .navLinks{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     position: fixed;
     left: -45vw;
     top: 5;
     background-color: coral;
-    align-items: center;
     width:45vw;
     height:95vh ;
     transition: all 1s;
+}
+
+.internal{
+    height:65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.external{
+    height:30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .navActive{
@@ -174,4 +213,91 @@ article{
 img{
     height: 125px;
     width: 125px;
+}
+
+@media screen and (min-width: 1000px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh 6vh 100vh;
+        grid-template-areas:
+        "he"
+        "nv"
+        "ma";
+        
+    }
+
+    #title{
+        font-size: 90px;
+    }
+
+    .navLinks{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        left: 0;
+        top: 0;
+        align-items: left;
+        width:100vw;
+        height:6vh ;
+        transition: all 0s;
+    }
+    .navActive{
+        transform: 0;
+    }
+    .internal{
+        height:auto;
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .external{
+        height:auto;
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .burger div{
+        display: none;
+    }
+    .box{
+        display: none;
+    }
+
+    .picLibrary{
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .library{
+        border-radius: 2px;
+        width: 96vw;
+      
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    
+    .overlayPlus{
+        position: absolute;
+        width: 300px;
+        height: auto;
+        opacity: 80%;
+    }
+    
+
+    .morePictures:active .overlayPlus{
+        opacity: 80%;
+    }
+    
+    
+    img{
+        height: 300px;
+        width: 300px;
+    }
+
 }
