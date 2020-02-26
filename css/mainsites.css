@@ -138,11 +138,10 @@ ol{
 
 .shadow{
     top: 0;
-    z-index: 10;
     width: 55vw;
     height: 100vh;
     opacity: 0;
-    right: -55vw;
+    left: -55vw;
     transition: all 1s;
     position: fixed;
 }
@@ -150,7 +149,7 @@ ol{
 .shadowActive{
     opacity: 15%;
     background-color: black;
-    right: 0vw;
+    left: 45vw;
 }
 
 header{
@@ -195,7 +194,7 @@ article{
     
 }
 
-.overlayPlus{
+#overlayPlus{
     position: absolute;
     width: 130px;
     height: auto;
@@ -210,7 +209,7 @@ article{
     position: relative;
 }
 
-img{
+.smallImg{
     height: 125px;
     width: 125px;
 }
@@ -226,6 +225,21 @@ img{
         "ma";
         
     }
+    #activeSite{
+        width: 20vw;
+        height: 100%;
+    }
+    header{
+        border-bottom: none;
+    }
+    h3{
+        font-size: 40px;
+    }
+    article{
+        font-size: 20px;
+        margin-left: 2vw;
+    }
+
 
     #title{
         font-size: 90px;
@@ -282,7 +296,7 @@ img{
         
     }
     
-    .overlayPlus{
+    #overlayPlus{
         position: absolute;
         width: 300px;
         height: auto;
@@ -295,9 +309,12 @@ img{
     }
     
     
-    img{
+    .smallImg{
         height: 300px;
         width: 300px;
+        object-fit: cover;
+        image-resolution: 50dpi;
+        margin: 2px;
     }
 
 }
