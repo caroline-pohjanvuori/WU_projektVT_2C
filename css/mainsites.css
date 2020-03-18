@@ -28,6 +28,15 @@ h1{
 h3{
     font-size:25px;
 }
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color:crimson;
+}
+
 
 #instagram{
     height: 40px;
@@ -174,7 +183,7 @@ article{
     height: 25%;
     padding-left: 5px;
     padding-top: 5px;
-    border-bottom: 3px solid gray;
+    border-bottom: 3px solid  rgb(214, 205, 186);
     
 }
 
@@ -191,7 +200,7 @@ article{
     display: flex;
     flex-direction: row;
     overflow: auto;
-    
+        
 }
 
 #overlayPlus{
@@ -212,6 +221,7 @@ article{
 .smallImg{
     height: 125px;
     width: 125px;
+    object-fit: cover;
 }
 
 @media screen and (min-width: 1000px){

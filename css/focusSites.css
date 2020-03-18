@@ -21,12 +21,29 @@
     justify-content: center;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color:crimson;
+}
+
 h1{
     font-size: 30px;
+
 }
 
 h3{
     font-size:25px;
+    margin-left: 10px;
+}
+
+p{
+    margin-left:10px ;
+    word-wrap: break-word;
+    width: 90vw;
 }
 
 #instagram{
@@ -37,17 +54,19 @@ h3{
 
 .wrapper{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 100px 100vh;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 100px auto auto;
     grid-template-areas:
     "nv"
     "he"
-    "ma";
+    "ma"
+    "fo";
 }
 
 nav{
     grid-area: nv;
     background-color:cornsilk;
+    width: 100%;
 
 }
 
@@ -166,53 +185,80 @@ header{
     background-color: white;
     width: 100vw;
     
-    
 }
 
 article{
-    height: 25%;
+    height: 25vh;
     padding-left: 5px;
     padding-top: 5px;
-    border-bottom: 3px solid gray;
+    border-bottom: 3px solid rgb(214, 205, 186);
     
 }
 
 .library{
     margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 2px;
     width: 100vw;
-  
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     
 }
 
 .smallImg{
-    margin: 2px;
-    height: 115px;
-    width: 115px;
+    margin: 5px;
+    padding: 15px;
+    background-color: rgb(214, 205, 186);
+    height: auto;
+    width: 85vw;
     object-fit: cover;
+}
+
+footer{
+    grid-area: fo;
+    background:cornsilk;
+    width: 100%;
+    padding: -30px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    color: black;
+    
 }
 
 @media screen and (min-width: 1000px){
     .wrapper{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 20vh 6vh 100vh;
+        grid-template-rows: 20vh 50px auto auto;
         grid-template-areas:
         "he"
         "nv"
-        "ma";
+        "ma"
+        "fo";
         
     }
 
     #title{
         font-size: 90px;
     }
+    h1{
+        margin-left: 30px;
+    }
+
     h3{
         font-size: 40px;
+        margin-left: 30px;
     }
+
+    
+    p{
+        margin-left: 30px;
+        width: 50vw;
+    }
+
     article{
         font-size: 20px;
     }
@@ -229,7 +275,7 @@ article{
         top: 0;
         align-items: left;
         width:100vw;
-        height:6vh ;
+        height:50px;
         transition: all 0s;
     }
     .navActive{
@@ -265,10 +311,23 @@ article{
         justify-content: center;
     }
     .smallImg{
-        width: 250px;
-        height: 250px;
+        width:auto;
+        max-height: 300px;
+        max-width: 100%;
         image-resolution: 72dpi;
-        margin: 2px;
+        object-fit: cover;
+    }
+    .library{
+        margin-top: 20px;
+        margin-left: 20px;
+        border-radius: 2px;
+        width: 100vw;
+      
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: left;
+        
     }
     
 }
