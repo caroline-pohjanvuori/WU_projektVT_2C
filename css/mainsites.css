@@ -47,11 +47,12 @@ a:hover{
 .wrapper{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 100px 100vh;
+    grid-template-rows: 50px 100px auto auto;
     grid-template-areas:
     "nv"
     "he"
-    "ma";
+    "ma"
+    "fo";
 }
 
 nav{
@@ -180,7 +181,7 @@ header{
 }
 
 article{
-    height: 25%;
+    height: 25vh;
     padding-left: 5px;
     padding-top: 5px;
     border-bottom: 3px solid  rgb(214, 205, 186);
@@ -190,6 +191,7 @@ article{
 .picLibrary{
     padding-top: 5px;
     padding-left: 10px;
+    padding-bottom: 10px;
     padding-right: 0;
     margin-right: 0;
 }
@@ -220,19 +222,29 @@ article{
 
 .smallImg{
     height: 125px;
+    image-rendering: optimizeSpeed;
+    image-resolution: 72dpi;
     width: 125px;
     object-fit: cover;
+}
+footer{
+    grid-area: fo;
+    background-color: cornsilk;
+    padding: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 @media screen and (min-width: 1000px){
     .wrapper{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 20vh 6vh 100vh;
+        grid-template-rows: 20vh 6vh auto auto;
         grid-template-areas:
         "he"
         "nv"
-        "ma";
+        "ma"
+        "fo";
         
     }
     #activeSite{
@@ -292,6 +304,7 @@ article{
 
     .picLibrary{
         padding-top: 50px;
+        padding-bottom: 50px;
         padding-left: 20px;
         padding-right: 0;
         margin-right: 0;
@@ -299,7 +312,7 @@ article{
     .library{
         border-radius: 2px;
         width: 96vw;
-      
+        image-resolution: 72dpi;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

@@ -213,8 +213,10 @@ article{
     padding: 15px;
     background-color: rgb(214, 205, 186);
     height: auto;
+    image-resolution: 72dpi;
     width: 85vw;
     object-fit: cover;
+    image-rendering: optimizeSpeed;
 }
 
 footer{
@@ -314,7 +316,6 @@ footer{
         width:auto;
         max-height: 300px;
         max-width: 100%;
-        image-resolution: 72dpi;
         object-fit: cover;
     }
     .library{
