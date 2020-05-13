@@ -204,6 +204,14 @@ article{
     overflow: auto;
         
 }
+#scrollLibrary{
+    display: flex;
+    flex-direction: column;
+    overflow: none;
+    padding-left: 5px;
+    padding-top: 5px;
+    border-bottom: 3px solid rgb(214, 205, 186);
+}
 
 #overlayPlus{
     position: absolute;
@@ -227,6 +235,17 @@ article{
     width: 125px;
     object-fit: cover;
 }
+#scrollImg{
+    margin: 5px;
+    padding: 15px;
+    background-color: rgb(214, 205, 186);
+    height: auto;
+    image-resolution: 72dpi;
+    width: 85vw;
+    object-fit: cover;
+    image-rendering: optimizeSpeed;
+}
+
 footer{
     grid-area: fo;
     background-color: cornsilk;
@@ -325,7 +344,24 @@ footer{
         height: auto;
         opacity: 80%;
     }
-    
+    #scrollImg{
+        width:auto;
+        max-height: 300px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    #scrollLibrary{
+        margin-top: 20px;
+        margin-left: 20px;
+        border-radius: 2px;
+        width: 100vw;
+      
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: left;
+        
+    }
 
     .morePictures:active .overlayPlus{
         opacity: 80%;
