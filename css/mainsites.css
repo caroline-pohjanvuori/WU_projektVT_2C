@@ -7,22 +7,18 @@
     transition: none !important;  
 }
 #title{
-    font-size: 45px;
+    font-size: 12vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: crimson;
+    color: #7C152A;
 
 }
 #activeSite{
-    background-color: brown;
+    background-color: #a52a2a;
     width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-h1{
-    font-size: 30px;
 }
 
 h3{
@@ -34,7 +30,7 @@ a{
 }
 
 a:hover{
-    color:crimson;
+    color:#7C152A;
 }
 
 
@@ -83,11 +79,12 @@ ol{
 .burger div{
     width: 55px;
     height: 10px;
-    background-color: coral;
+    background-color: #ff7f50;
     
     margin: 5px;
     border-radius: 10% ;
     transition: all 0.5s;
+    z-index: 4;
 }
 .box{
     height: 50px;
@@ -96,6 +93,7 @@ ol{
     position: fixed;
     background-color: coral;
     transition: all 1s;
+    z-index: 1;
 }
 
 .boxActive{
@@ -103,17 +101,22 @@ ol{
 }
 
 .toggle .line1{
-    transform: rotate(-45deg) translate(-6px, 15px);
-    background-color: crimson;
+    transform: rotate(-45deg) translate(-5px, 20px);
+    background-color: #7C152A;
+    position: fixed;
+    
 }
 
 .toggle .line2{
     opacity: 0;
+    z-index: 0;
 }
 
 .toggle .line3{
-    transform: rotate(45deg) translate(-6px, -15px);
-    background-color: crimson;
+    transform: rotate(45deg) translate(10px, -3px);
+    background-color: #7C152A;
+    position: fixed;
+
 }
 .navLinks{
     position: fixed;
@@ -123,6 +126,7 @@ ol{
     width:45vw;
     height:95vh ;
     transition: all 1s;
+    z-index: 2;
 }
 
 .internal{
@@ -160,6 +164,7 @@ ol{
     opacity: 15%;
     background-color: black;
     left: 45vw;
+    z-index: 1;
 }
 
 header{
@@ -169,6 +174,7 @@ header{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    padding-left: 2vw;
 
 }
 
@@ -231,7 +237,6 @@ article{
 .smallImg{
     height: 125px;
     image-rendering: optimizeSpeed;
-    image-resolution: 72dpi;
     width: 125px;
     object-fit: cover;
 }
@@ -248,7 +253,7 @@ article{
 
 footer{
     grid-area: fo;
-    background-color: cornsilk;
+    background-color: #fff8dc;
     padding: 10px;
     padding-top: 25px;
     padding-bottom: 25px;
